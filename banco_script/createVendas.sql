@@ -33,6 +33,5 @@ ape_sigla char(2) not null
 create table item(
 ite_id int primary key not null,
 ite_nome nvarchar(255) not null,
-ite_ape_id int not null,
-ite_status char not null
+ite_
 );
