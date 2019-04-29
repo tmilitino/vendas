@@ -58,7 +58,7 @@ create table estoque(
     est_tipo CHAR NOT NULL,
     est_dt_cad DATETIME2 not null,
     est_qtd FLOAT NOT null
-)
+);
 
 CREATE TABLE nf(
     nf_serie int primary key not null,
@@ -67,7 +67,7 @@ CREATE TABLE nf(
     nf_dt_ent DATETIME2 NOT NULL,
     nf_dt_cad DATETIME2 NOT NULL,
     nf_tipo char  not null
-)
+);
 
 create table saida(
     sai_id int PRIMARY key not null,
@@ -77,4 +77,23 @@ create table saida(
     sai_formaPag char not NULL,
     sai_status char not NULL,
     sai_dt_cad DATETIME2 NOT NULL
-)
+);
+
+create table cliente(
+    cli_id int primary key not null,
+    cli_cpf char not NULL,
+    cli_end nvarchar(255) not null,
+    cli_dt_cad DATETIME2 NOT NULL,
+    cli_cel int not null
+);
+
+create table pagamento
+
+create TABLE pedido(
+    ped_id int PRIMARY KEY not null,
+    ped_cli_id int not null,
+    ped_prod int not null,
+    ped_dt_cad DATETIME2 NOT NULL,
+    ped_dt_praz DATETIME2 NOT NULL,
+    ped_end_entr NVARCHAR(255) not null
+);
